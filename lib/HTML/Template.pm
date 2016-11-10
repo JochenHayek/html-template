@@ -8,7 +8,7 @@ HTML::Template - Perl module to use HTML-like templating language
 
 =head1 SYNOPSIS
 
-First you make a template - this is just a normal HTML file with a few
+First you create a template - this is just a normal HTML file with a few
 extra tags, the simplest being C<< <TMPL_VAR> >>
 
 For example, test.tmpl:
@@ -37,7 +37,7 @@ Now you can use it in a small CGI program:
     # send the obligatory Content-Type and print the template output
     print "Content-Type: text/html\n\n", $template->output;
 
-If all is well in the universe this should show something like this in
+If all is well in the universe, this should show something like this in
 your browser when visiting the CGI:
 
     My Home Directory is /home/some/directory
@@ -48,8 +48,8 @@ your browser when visiting the CGI:
 This module attempts to make using HTML templates simple and natural.
 It extends standard HTML with a few new HTML-esque tags - C<< <TMPL_VAR> >> 
 C<< <TMPL_LOOP> >>, C<< <TMPL_INCLUDE> >>, C<< <TMPL_IF> >>, C<< <TMPL_ELSE> >> 
-and C<< <TMPL_UNLESS> >>.  The file written with HTML and these new tags
-is called a template.  It is usually saved separate from your script -
+and C<< <TMPL_UNLESS> >>. The file written in HTML and using these new tags
+is called a template. It is usually saved separate from your script -
 possibly even created by someone else!  Using this module you fill in the
 values for the variables, loops and branches declared in the template.
 This allows you to separate design - the HTML - from the data, which
@@ -87,7 +87,7 @@ used to extend existing HTML editors/analyzers to support HTML::Template.
 
 An advantage of this module over home-grown tag-replacement schemes is
 the support for loops.  In my work I am often called on to produce
-tables of data in html.  Producing them using simplistic HTML
+tables of data in HTML.  Producing them using simplistic HTML
 templates results in programs containing lots of HTML since the HTML
 itself cannot represent loops.  The introduction of loop statements in
 the HTML simplifies this situation considerably.  The designer can
@@ -487,7 +487,7 @@ to "sam.tmpl", HTML::Template will try to open F</home/sam/sam.tmpl> to
 access the template file.  You can also affect the search path for files
 with the C<path> option to C<new()> - see below for more information.
 
-You can modify the Template object's behavior with C<new()>. The options
+You can modify the Template object's behavior with C<new()>. The following options
 are available:
 
 =head3 Error Detection Options
